@@ -1,0 +1,38 @@
+DEFAULT_LEVELS = [
+    {
+        "level": 1,
+        "clef": "treble",
+        "min_note": "C4",
+        "max_note": "C5",
+        "allow_accidental": False,
+        "allow_ledger_line": False,
+        "description": "높은자리표 기본 음계",
+    },
+    {
+        "level": 2,
+        "clef": "bass",
+        "min_note": "C3",
+        "max_note": "C4",
+        "allow_accidental": False,
+        "allow_ledger_line": False,
+        "description": "낮은자리표 기본 음계",
+    },
+    {
+        "level": 3,
+        "clef": "treble",
+        "min_note": "A3",
+        "max_note": "E5",
+        "allow_accidental": False,
+        "allow_ledger_line": True,
+        "description": "덧줄 음표",
+    },
+    {
+        "level": 4,
+        "clef": "treble",
+        "min_note": "C4",
+        "max_note": "C5",
+        "allow_accidental": True,
+        "allow_ledger_line": False,
+        "description": "샵/플랫 음표",
+    },
+]
