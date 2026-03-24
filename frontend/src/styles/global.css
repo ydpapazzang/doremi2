@@ -98,6 +98,8 @@ h1 {
 
 .level-action-row {
   margin-bottom: 24px;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .primary-button {
