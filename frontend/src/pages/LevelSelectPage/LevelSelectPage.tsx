@@ -69,6 +69,13 @@ export function LevelSelectPage() {
       {error ? <p className="error-text">{error}</p> : null}
       {user ? <p className="description">현재 도달 레벨: Level {user.current_level}</p> : null}
 
+      <div className="button-row level-action-row">
+        <PrimaryButton onClick={handleStart} disabled={isLoading || !!error}>
+          Level {selectedLevel} 시작
+        </PrimaryButton>
+        <LogoutButton />
+      </div>
+
       <div className="level-list">
         {levels.map((level) => (
           <article
@@ -92,13 +99,6 @@ export function LevelSelectPage() {
             )}
           </article>
         ))}
-      </div>
-
-      <div className="button-row">
-        <PrimaryButton onClick={handleStart} disabled={isLoading || !!error}>
-          Level {selectedLevel} 시작
-        </PrimaryButton>
-        <LogoutButton />
       </div>
     </section>
   );

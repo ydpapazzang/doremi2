@@ -96,6 +96,10 @@ h1 {
   flex-wrap: wrap;
 }
 
+.level-action-row {
+  margin-bottom: 24px;
+}
+
 .primary-button {
   border: 0;
   border-radius: 16px;
