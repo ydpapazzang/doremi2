@@ -27,7 +27,7 @@ export function StartPage() {
       const user = await createUser(nickname.trim());
       saveUser(user.id, user.nickname);
       navigate("/levels");
-    } catch (caughtError) {
+    } catch {
       setError("사용자 정보를 만드는 중 문제가 생겼어요. 백엔드 실행 상태를 확인해 주세요.");
     } finally {
       setIsSubmitting(false);

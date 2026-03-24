@@ -37,7 +37,7 @@ export function HistoryPage() {
 
         setStats(nextStats);
         setSessions(nextSessions);
-      } catch (caughtError) {
+      } catch {
         if (isMounted) {
           setError("학습 기록을 불러오지 못했어요. 백엔드를 확인해 주세요.");
         }

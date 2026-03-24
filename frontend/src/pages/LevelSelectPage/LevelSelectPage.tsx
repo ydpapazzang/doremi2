@@ -37,7 +37,7 @@ export function LevelSelectPage() {
           setUser(currentUser);
           setSelectedLevel(Math.min(currentUser.current_level, 1));
         }
-      } catch (caughtError) {
+      } catch {
         if (isMounted) {
           setError("레벨 정보를 불러오지 못했어요. 백엔드를 확인해 주세요.");
         }

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { PianoKeyboard } from "../../components/piano/PianoKeyboard";
 import { LogoutButton } from "../../components/common/LogoutButton";
+import { PianoKeyboard } from "../../components/piano/PianoKeyboard";
 import { StaffNotation } from "../../components/staff/StaffNotation";
 import { TOTAL_QUESTIONS } from "../../constants/quiz";
 import { createSession, finishSession, getLevels, submitAnswer } from "../../services/api/client";
@@ -84,7 +84,7 @@ export function QuizPage() {
         setCurrentNote(getRandomNote(nextTargetNotes));
         void pianoAudio.preload(nextKeyboardNotes);
         questionStartedAt.current = Date.now();
-      } catch (caughtError) {
+      } catch {
         if (isMounted) {
           setError("세션을 시작하지 못했어요. 백엔드가 실행 중인지 확인해 주세요.");
         }
@@ -152,7 +152,7 @@ export function QuizPage() {
         setFeedback("다음 음표를 보고 눌러보자.");
         questionStartedAt.current = Date.now();
       }, 500);
-    } catch (caughtError) {
+    } catch {
       setError("정답을 확인하는 중 문제가 생겼어요. 다시 시도해 주세요.");
     } finally {
       setIsSubmitting(false);
